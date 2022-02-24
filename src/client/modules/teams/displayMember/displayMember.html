@@ -1,0 +1,18 @@
+<template>
+    <div class="member-container">
+        <div if:true={isAnyMember}>
+            <template for:each={members} for:item="member">
+                <div key={member.id} class="member-details">
+                    <hr>
+                    <p>Name:&nbsp;<strong>{member.name}</strong></p>
+                    <p>Team:&nbsp;<strong>{member.team}</strong></p>
+                    <p>Skills:&nbsp;<strong>{member.skills}</strong></p>
+                    <hr>
+                </div>
+            </template>
+        </div>
+        <div if:false={isAnyMember} class="empty-member-case">
+            No members added yet.
+        </div>
+    </div>
+</template>

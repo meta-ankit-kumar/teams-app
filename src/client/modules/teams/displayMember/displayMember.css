@@ -1,0 +1,15 @@
+.member-container {
+    background-color: antiquewhite;
+    box-shadow: 1px 1px 5px rgb(155, 161, 155);
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.empty-member-case {
+    text-align: center;
+}
+
+.member-details {
+    text-align: center;
+}
