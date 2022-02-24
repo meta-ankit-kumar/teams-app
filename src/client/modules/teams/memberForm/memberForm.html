@@ -1,0 +1,34 @@
+<template>
+    <h1 class="member-heading">Member Form</h1>
+    <div class="form-container">
+        <div>
+            <label for="memberName">Name: 
+            </label>
+            <input type="text" name="memberName" class={isWarningForName} id="memberName" oninput={handleNameChange}/>
+        </div>
+        <div>
+            <label for="teamname">Team: 
+            </label>
+            <template if:true={teamList}>
+                <select name="teamName" id="teamName" onchange={handleTeamChange}>
+                    <template for:each={teamList} for:item="team">
+                        <option key={team.name} value={team.name}>{team.name}</option>
+                    </template>
+                </select>
+            </template>
+            <template if:false={teams}>
+                No teams available.
+            </template>
+        </div>
+        <div>
+            <label for="skills">Skills:
+            </label>
+            <input type="text" class={isWarningForSkills} name="skills" id="skills" oninput={handleSkillsChange}>
+        </div>
+        <div>
+            <label for="submit">
+            </label>
+            <input type="submit" value="submit" onclick={handleSubmitForm} disabled={isDisabled}>
+        </div>
+    </div>
+</template>

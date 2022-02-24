@@ -1,0 +1,27 @@
+.form-container div label{
+    display: inline-block;
+    width: 20%;
+}
+.form-container div{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 30%;
+}
+
+.form-container {
+    background-color: antiquewhite;
+    box-shadow: 1px 1px 5px rgb(155, 161, 155);
+    width: 70%;
+    margin: 0 auto;
+}
+.form-container input{
+    display: inline-block;
+}
+
+.member-heading {
+    text-align: center;
+}
+
+.warning {
+    border: 1px solid red;
+}
